@@ -1,3 +1,4 @@
+/* Responsive Design - Adjustments for Different Screen Sizes */
 @media screen and (max-width: 1400px) {
   #profile {
     height: 83vh;
@@ -44,6 +45,41 @@
   }
   .about-containers {
     margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  /* Improved spacing and layout for tablets */
+  .section-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .section__text {
+    padding: 0 5%;
+  }
+  .menu-links {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Better menu behavior for smaller screens */
+  .menu-links {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 75%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  .menu-links.open {
+    transform: translateX(0);
   }
 }
 
@@ -99,5 +135,18 @@
   }
   .text-container {
     text-align: justify;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  /* Additional styles for very small screens */
+  .title {
+    font-size: 1.75rem;
+  }
+  .section__text {
+    padding: 0 3%;
+  }
+  .menu-links {
+    width: 90%;
   }
 }
